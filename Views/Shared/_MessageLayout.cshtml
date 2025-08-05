@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"] - Message Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffbe6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f8c291;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        footer {
+            background-color: #f8c291;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Message Page
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        &copy; 2025 Message Layout
+    </footer>
+
+</body>
+</html>

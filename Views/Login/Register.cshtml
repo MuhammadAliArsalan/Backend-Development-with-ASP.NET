@@ -1,0 +1,16 @@
+@using (Html.BeginForm("RegisterPost", "LoginController", FormMethod.Post))
+{
+<div>
+    <label>Username</label>
+    @Html.TextBox("username")
+</div>
+<div>
+    <label>Password</label>
+    @Html.Password("password")
+</div>
+<div>
+    <label>Address</label>
+    @Html.TextBox("address")
+</div>
+<input type="submit" value="Login" />
+}

@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Buy an Item";
+}
+
+<h2>Buy an Item</h2>
+
+<form asp-action="AddToCart" method="post">
+    <label>Enter item name:</label>
+    <input type="text" name="itemName" />
+    <button type="submit">Buy Now</button>
+</form>

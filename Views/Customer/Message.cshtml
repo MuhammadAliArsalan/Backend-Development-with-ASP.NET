@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Customer Message";
+    Layout = "~/Views/Shared/_MessageLayout.cshtml";
+}
+
+<h2>Customer Message</h2>
+<p>This is the customer message page.</p>
+<h3>@ViewBag.MyMessage</h3>
+<br />
+<p>The courses i have studied</p>
+<ul>
+    @foreach (var course in (List<string>)ViewData["Courses"])
+    {
+    <li>@course</li>
+    }
+</ul>
+
+<a asp-action="Details" asp-controller="Customer">Go to Details Page</a>

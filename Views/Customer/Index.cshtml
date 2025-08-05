@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Customer";
+}
+
+<h3>@ViewBag.Message</h3>
+<p>There are <strong>@ViewBag.CustomerCount</strong> customers added in our list</p>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Amount</th>
+    </tr>
+
+    @foreach (var customer in Model)
+    {
+    <tr>
+        <td>@customer.Id</td>
+        <td>@customer.Name</td>
+        <td>@customer.Amount</td>
+    </tr>
+    }
+</table>
