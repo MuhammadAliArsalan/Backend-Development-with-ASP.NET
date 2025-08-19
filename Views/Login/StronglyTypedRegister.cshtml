@@ -1,0 +1,29 @@
+@model WebApplication1.Models.RegisterViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    @using (Html.BeginForm("RegisterSuccess", "Login", FormMethod.Post))
+    {
+    <div>
+        @Html.LabelFor(m => m.userName)
+        @Html.TextBoxFor(m => m.userName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.password)
+        @Html.PasswordFor(m => m.password)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.email)
+        @Html.TextBoxFor(m => m.email)
+    </div>
+
+    <input type="submit" value="Register" />
+    }
+</body>
+</html>

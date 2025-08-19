@@ -1,0 +1,44 @@
+@model WebApplication1.Models.Account
+
+<h2>Register Account</h2>
+
+<form asp-action="PostAccount" asp-controller="Account" method="post">
+    <div>
+        <label>Username:</label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Password:</label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Age:</label>
+        <input asp-for="Age" />
+        <span asp-validation-for="Age" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email" style="color:red"></span>
+    </div>
+
+    @**All the asp- attributes you see in your <form> and <input> elements are called ASP.NET Core Tag Helpers *@
+    <div>
+        <label>Website:</label>
+        <input asp-for="Website" />
+        <span asp-validation-for="Website" style="color:red"></span>
+    </div>
+
+    @*the asp-validation-for  is Used to show validation error messages for the field.*@
+
+    <button type="submit">Register</button>
+</form>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

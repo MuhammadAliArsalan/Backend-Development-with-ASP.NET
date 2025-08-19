@@ -1,0 +1,9 @@
+@model IEnumerable<WebApplication1.Models.RegisterViewModel>
+
+    <h2>User List</h2>
+    <ul>
+        @foreach (var item in Model)
+    {
+        <li>@item.userName - @item.password - @item.email</li>
+    }
+    </ul>

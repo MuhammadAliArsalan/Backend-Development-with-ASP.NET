@@ -1,3 +1,4 @@
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,6 +10,8 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true; // Cookie not accessible via JavaScript
     options.Cookie.IsEssential = true; // Required for GDPR compliance
 });
+
+
 
 var app = builder.Build();
 
@@ -31,6 +34,6 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Index}/{id?}");
 
 app.Run();
